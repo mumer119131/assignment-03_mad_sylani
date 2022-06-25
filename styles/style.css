@@ -5,7 +5,9 @@
     font-family: monospace;
     color: rgb(78, 78, 78);
 }
-
+html{
+    scroll-behavior: smooth;
+}
 nav{
     display: flex;
     align-items: center;
@@ -38,6 +40,26 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #181818;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 /* main element css */
@@ -62,8 +84,8 @@ main{
 }
 .intro h3 b{
     color: white;
-    background-color: rgba(66, 66, 66, 0.61);
-    padding: 5px;
+    background-color: rgba(46, 46, 46, 0.767);
+    padding: 5px 10px;
 }
 .intro span{
     color: white;
@@ -81,13 +103,13 @@ main{
 }
 .projects-main{
     display: flex;
-    flex-wrap:wrap;
-    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .project{
     display: flex;
-    width: 100%;
+    width: 300px;
     justify-content: space-between;
     margin: 5px;
 }
@@ -107,6 +129,7 @@ main{
     font-weight: lighter;
     background-color: black;
     color: white;
+    font-size: 1vw;
 }
 
 .about h3{
@@ -120,10 +143,12 @@ main{
 .authors{
     display: flex;
     margin-top: 20px;
-    
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .author{
-    padding: 0 10px  ;
+    width: 300px;
+    margin: 5px;
 }
 .author img{
     width: 100%;
@@ -132,17 +157,25 @@ main{
 .author h2{
     margin-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2vw;
 }
 .author h4{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
     margin-bottom: 10px;
+    font-size: 1vw;
+}
+.author p{
+    font-size: 1vw;
 }
 .author button{
     width: 100%;
     margin-top: 10px;
     padding: 10px;
     border: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
 }
 .contact {
     margin-top: 20px;
@@ -166,7 +199,6 @@ main{
 .contact button{
     background-color: black;
     color: white;
-    width: 20%;
     margin-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px;
@@ -177,7 +209,7 @@ main{
     margin-bottom: 20px;
 }
 
-footer h3{
+footer h4{
     width: 100%;
     text-align: center;
     background-color: black;
