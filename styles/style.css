@@ -17,6 +17,8 @@ nav{
 header{
     box-shadow: 0 0 10px 0 gray;
     padding: 10px 30px;
+    width: 100vw;
+    min-width: 415px;
 }
 
 .logo_text b{
@@ -93,7 +95,7 @@ main{
 
 
 .projects h3{
-    font-size: 1.5vw;
+    font-size:x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
@@ -117,6 +119,7 @@ main{
 .project img{
     width: 100%;
     cursor: pointer;
+    border-radius: 5px;
 }
 .project img:hover{
     filter: brightness(150%);
@@ -127,17 +130,20 @@ main{
     padding: 5px 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
-    background-color: black;
+    background-color: rgb(29, 29, 29);
     color: white;
-    font-size: 1vw;
+    font-size:medium;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .about h3{
-    font-size: 1.5vw;
+    font-size: x-large;
 }
 .about p{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
+
 }
 
 .authors{
@@ -153,20 +159,26 @@ main{
 .author img{
     width: 100%;
     filter: grayscale(70%);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.author img:hover{
+    border: 2px solid gray;
 }
 .author h2{
     margin-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2vw;
+    font-size: x-large;
 }
 .author h4{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
     margin-bottom: 10px;
-    font-size: 1vw;
+    font-size: large;
 }
 .author p{
-    font-size: 1vw;
+    font-size: medium;
 }
 .author button{
     width: 100%;
@@ -176,6 +188,9 @@ main{
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: bold;
+    background-color: #252525;
+    color: white;
+    border-radius: 5px;
 }
 .contact {
     margin-top: 20px;
@@ -194,6 +209,8 @@ main{
     width: 100%;
     margin-top: 10px;
     padding: 10px;
+    border: 1px solid #252525;
+    border-radius: 5px;
 }
 
 .contact button{
@@ -202,6 +219,8 @@ main{
     margin-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 .map img{
     width: 100%;
